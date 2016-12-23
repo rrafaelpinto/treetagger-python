@@ -107,7 +107,8 @@ class TreeTagger(TaggerI):
                     treetagger_bin_name = 'tree-tagger-' + language
                     self._encoding = u'latin-1'
                 else:
-                    treetagger_bin_name = 'tree-tagger-' + language + u'-' + encoding
+                    #treetagger_bin_name = 'tree-tagger-' + language + u'-' + encoding
+                    treetagger_bin_name = 'tree-tagger-' + language
                     self._encoding = encoding
 
             else:
