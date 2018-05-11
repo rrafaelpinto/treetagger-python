@@ -122,11 +122,11 @@ class TreeTagger(TaggerI):
                 searchpath=treetagger_paths,
                 url=_treetagger_url,
                 verbose=verbose)
-        print u'### {}'.format(self._treetagger_bin)
+        print(u'### {}'.format(self._treetagger_bin))
 
         if encoding in _treetagger_charset:
             self._encoding = encoding
-        print u'#### {}'.format(self._encoding)
+        print(u'#### {}'.format(self._encoding))
         
     def tag(self, sentences):
         """Tags a single sentence: a list of words.
@@ -156,7 +156,7 @@ class TreeTagger(TaggerI):
 
         # Check the return code.
         if p.returncode != 0:
-            print stderr
+            print(stderr)
             raise OSError('TreeTagger command failed!')
 
         if isinstance(stdout, unicode) and encoding:
