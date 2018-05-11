@@ -30,7 +30,7 @@ u'utf8' : ['french', 'german', 'greek', 'italian', 'spanish', 'english', 'portug
 _treetagger_charset = [u'utf8', u'latin-1']
 
 class TreeTagger(TaggerI):
-    ur"""
+    r"""
     A class for pos tagging with TreeTagger. The input is the paths to:
      - a language trained on training data
      - (optionally) the path to the TreeTagger binary
