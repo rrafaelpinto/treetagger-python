@@ -92,6 +92,7 @@ class TreeTagger(TaggerI):
             raise LookupError('Language not in language list!')
 
         try:
+            print(path_to_home)
             self._treetagger_bin = find_binary(
                 treetagger_bin_name, path_to_home,
                 env_vars=('TREETAGGER', 'TREETAGGER_HOME'),
