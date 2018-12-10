@@ -17,7 +17,7 @@ from sys import platform as _platform
 
 _treetagger_url = 'http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/'
 
-_treetagger_languages = ['bulgarian', 'dutch', 'english', 'estonian', 'finnish', 'french', 'galician', 'german', 'italian', 'polish', 'russian', 'slovak', 'slovak2', 'spanish', 'portuguese', 'portuguese2']
+_treetagger_languages = ['bulgarian', 'dutch', 'english', 'estonian', 'finnish', 'french', 'galician', 'german', 'italian', 'polish', 'russian', 'slovak', 'slovak2', 'spanish', 'portuguese']
 
 class TreeTagger(TaggerI):
     r"""
@@ -92,7 +92,6 @@ class TreeTagger(TaggerI):
             raise LookupError('Language not in language list!')
 
         try:
-            print(path_to_home)
             self._treetagger_bin = find_binary(
                 treetagger_bin_name, path_to_home,
                 env_vars=('TREETAGGER', 'TREETAGGER_HOME'),
