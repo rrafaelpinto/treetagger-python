@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 # Natural Language Toolkit: Interface to the TreeTagger POS-tagger
 #
 # Copyright (C) Mirko Otto
