@@ -115,15 +115,15 @@ class TreeTagger(TaggerI):
         # Run the tagger and get the output
         if(self._abbr_list is None):
             p = Popen([self._treetagger_bin], 
-                        shell=False, stdin=PIPE, stdout=PIPE, stderr=PIPE, universal_newlines=True)
+                        shell=False, stdin=PIPE, stdout=PIPE, stderr=PIPE)
         elif(self._abbr_list is not None):
             p = Popen([self._treetagger_bin,"-a",self._abbr_list], 
-                        shell=False, stdin=PIPE, stdout=PIPE, stderr=PIPE, universal_newlines=True)
+                        shell=False, stdin=PIPE, stdout=PIPE, stderr=PIPE)
         
         #(stdout, stderr) = p.communicate(bytes(_input, 'UTF-8'))
         #(stdout, stderr) = p.communicate(str(_input).encode('utf-8'))
         #(stdout, stderr) = p.communicate(' '.join(_input).encode('UTF-8').strip())        
-        (stdout, stderr) = p.communicate(unicode(_input, 'UTF-8'))
+        (stdout, stderr) = p.communicate(unicode(_input, 'utf-8'))
 
         # Check the return code.
         if p.returncode != 0:
