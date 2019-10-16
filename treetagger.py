@@ -122,7 +122,8 @@ class TreeTagger(TaggerI):
         
         #(stdout, stderr) = p.communicate(bytes(_input, 'UTF-8'))
         #(stdout, stderr) = p.communicate(str(_input).encode('utf-8'))
-        (stdout, stderr) = p.communicate(' '.join(_input).encode('UTF-8').strip())        
+        #(stdout, stderr) = p.communicate(' '.join(_input).encode('UTF-8').strip())        
+        (stdout, stderr) = p.communicate(unicode(_input, 'UTF-8'))
 
         # Check the return code.
         if p.returncode != 0:
